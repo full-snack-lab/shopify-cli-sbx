@@ -89,12 +89,6 @@ installed but `SHOPIFY_CLI_CLOUDFLARED_PATH` is already set, it defers to you.
   activates if forced, and expects cloudflared on `PATH`.
 - `shopify theme dev` needs no tunnel; the plugin leaves it alone.
 
-CI (`.github/workflows/cli-compat.yml`) smoke-tests the plugin against a pinned
-CLI and `@shopify/cli@latest` by forcing `SHOPIFY_CLI_SBX=1`, linking the
-plugin, and asserting `shopify sbx doctor` reports the shim active. That covers
-plugin load + the `SHOPIFY_CLI_CLOUDFLARED_PATH` seam. It does **not** run a
-live `shopify app dev` tunnel or recreate egress-restricted sandbox networking.
-
 ## License
 
 MIT © Full Snack Lab

@@ -1,0 +1,51 @@
+{
+  "name": "@full-snack-lab/shopify-cli-sbx",
+  "version": "1.0.0",
+  "description": "Shopify CLI plugin that makes cloudflared tunnels work inside sandboxed (sbx) environments with zero configuration.",
+  "keywords": [
+    "shopify",
+    "shopify-cli",
+    "oclif-plugin",
+    "cloudflared",
+    "tunnel",
+    "sandbox"
+  ],
+  "homepage": "https://github.com/full-snack-lab/shopify-cli-sbx",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/full-snack-lab/shopify-cli-sbx.git"
+  },
+  "license": "MIT",
+  "author": "Full Snack Lab",
+  "type": "commonjs",
+  "files": [
+    "dist",
+    "oclif.manifest.json"
+  ],
+  "scripts": {
+    "build": "node build.mjs",
+    "prepack": "node build.mjs"
+  },
+  "oclif": {
+    "commands": "./dist/commands",
+    "topics": {
+      "sbx": {
+        "description": "Sandbox (sbx) environment support."
+      }
+    },
+    "hooks": {
+      "init": "./dist/hooks/init.js"
+    }
+  },
+  "dependencies": {
+    "@oclif/core": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "esbuild": "^0.25.0",
+    "typescript": "^5.9.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

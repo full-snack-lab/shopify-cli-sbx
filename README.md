@@ -5,9 +5,12 @@ environments (Docker sandboxes, `sbx`, and similar egress-restricted
 containers) with **zero configuration**.
 
 ```bash
-shopify plugins install @full-snack-lab/shopify-cli-sbx
-shopify app dev        # just works
+shopify plugins install full-snack-lab/shopify-cli-sbx   # from GitHub
+shopify app dev                                          # just works
 ```
+
+(Once the package is on the npm registry the equivalent is
+`shopify plugins install @full-snack-lab/shopify-cli-sbx`.)
 
 Outside a sandbox the plugin does nothing at all.
 
